@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#141021">
+  <title>Урок 1 · Задание 4 · Дело чайного дома</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="case.css">
+  <script src="case-data.js" defer></script>
+  <script src="case-engine.js" defer></script>
+</head>
+<body data-zone="desk">
+  <main class="case-shell">
+    <header class="topbar">
+      <span class="route-label">Уровень 1 · Урок 1 · Задание 4 · Дело чайного дома</span>
+      <div class="topbar-right">
+        <div class="code-track" id="code-track" aria-label="Печати кода дела"></div>
+        <button class="reset-btn" id="reset-btn" type="button">Начать дело заново</button>
+      </div>
+    </header>
+
+    <section class="zone zone-desk" id="zone-desk" aria-labelledby="desk-title">
+      <div class="desk-decor" aria-hidden="true">
+        <span class="d-window"><i class="d-stars"></i><i class="d-moon"></i><i class="d-sea"></i></span>
+        <span class="d-lamp"></span>
+        <span class="d-desk"></span>
+        <span class="d-light"></span>
+        <span class="d-shadow"></span>
+        <span class="d-mug"></span>
+      </div>
+      <div class="desk-head">
+        <div class="case-sign">
+          <span class="sign-label">Урок 1 · дознание №47</span>
+          <h1 id="desk-title">Дело чайного<br>дома</h1>
+          <div class="sign-runes" aria-hidden="true"><span>✦</span><span>⌑</span><span>✦</span></div>
+        </div>
+        <div class="desk-intro" id="desk-intro"></div>
+      </div>
+      <div class="chapter-cards" id="chapter-cards"></div>
+      <div class="desk-finale" id="desk-finale"></div>
+      <div class="suspect-board">
+        <div class="board-label">Доска подозреваемых</div>
+        <div class="suspect-grid" id="suspect-grid"></div>
+      </div>
+    </section>
+
+    <section class="zone zone-dossier zone-c1" id="zone-c1" hidden>
+      <div class="zone-head" id="head-c1"></div>
+      <div class="dossier" id="dossier-c1"></div>
+    </section>
+
+    <section class="zone zone-dossier zone-c2" id="zone-c2" hidden>
+      <div class="zone-head" id="head-c2"></div>
+      <div class="dossier" id="dossier-c2"></div>
+    </section>
+
+    <section class="zone zone-dossier zone-c3" id="zone-c3" hidden>
+      <div class="zone-head" id="head-c3"></div>
+      <div class="dossier" id="dossier-c3"></div>
+    </section>
+
+    <section class="zone zone-dossier zone-c4" id="zone-c4" hidden>
+      <div class="zone-head" id="head-c4"></div>
+      <div class="dossier" id="dossier-c4"></div>
+    </section>
+
+    <section class="zone zone-room" id="zone-room" hidden>
+      <div class="room-mount" id="room-mount"></div>
+    </section>
+
+    <section class="zone zone-finale" id="zone-finale" hidden>
+      <div class="zone-head" id="head-fin"></div>
+      <div class="finale-mount" id="finale-mount"></div>
+    </section>
+
+    <footer class="case-footer">
+      <span class="footer-location">Путь иероглифа · Дело чайного дома</span>
+      <span>海 茶 金 银 钱 · 错 蚊 虾 草 花 桥 树 林 · 休 从 说 谢 叫 体 · 快 忙 找 拿 打 想 喝 吃 · 虽</span>
+    </footer>
+  </main>
+
+  <nav class="char-menu" aria-label="Разделы дела"><div class="menu-inner" id="menu-inner"></div></nav>
+  <p id="voice-tip" role="status" hidden>Не удалось озвучить слог — проверь, что папка audio на месте, и попробуй снова.</p>
+  <noscript><p style="color:#ffe5bd;background:#593d39;border:2px solid #c99a72;padding:12px;margin:16px;">Включи JavaScript — без него досье и допросы не работают.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#08070f">
+  <title>Урок 1 · Задание 2 · Экспедиция пяти ключей</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400&family=Nunito:wght@400;700;800&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="adventure.css">
+  <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js" defer></script>
+  <script src="adventure-data.js" defer></script>
+  <script src="adventure-engine.js" defer></script>
+</head>
+<body>
+  <main class="game" id="game">
+    <header class="hud" id="hud">
+      <div class="hud-face"><img id="hud-face-img" src="../assets/characters/cinnabon.svg" alt="Синнабон"></div>
+      <div class="hud-mid">
+        <div class="hud-gametitle">Экспедиция пяти ключей</div>
+        <div class="hud-objective" id="hud-objective" role="status">Загрузка…</div>
+      </div>
+      <div class="hud-track" id="hud-track" aria-label="Этапы"></div>
+      <div class="hud-seals" id="hud-seals" aria-label="Печати кода"></div>
+      <button class="hud-reset" id="reset-btn" type="button" title="Пройти заново">⟳</button>
+    </header>
+
+    <div class="dlg" id="dlg">
+      <div class="dlg-face"><img id="dlg-face-img" src="../assets/characters/cinnabon.svg" alt=""></div>
+      <div class="dlg-body">
+        <div class="dlg-name" id="dlg-name">Синнабон</div>
+        <div class="dlg-text" id="dlg-text"></div>
+      </div>
+      <div class="dlg-arrow" id="dlg-arrow" aria-hidden="true">▼</div>
+    </div>
+
+    <section class="viewport" id="viewport" aria-live="polite"></section>
+  </main>
+  <p id="voice-tip" role="status" hidden>Не удалось озвучить слог — проверь, что папка audio на месте, и попробуй снова.</p>
+  <noscript><p style="color:#ffe5bd;background:#3a1f2e;border:2px solid #c25550;padding:12px;border-radius:0;margin:16px;">Включи JavaScript — без него игра не работает.</p></noscript>
+</body>
+</html>

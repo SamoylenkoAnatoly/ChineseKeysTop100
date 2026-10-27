@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#171329">
+  <title>Урок 1 · Задание 1 · Испытание ключей</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="quest.css">
+  <script src="quest-data.js" defer></script>
+  <script src="quest-engine.js" defer></script>
+</head>
+<body data-zone="map">
+  <main class="quest-shell">
+    <header class="topbar">
+      <span class="route-label">Уровень 1 · Урок 1 · Задание 1 · Испытание ключей</span>
+      <div class="topbar-right">
+        <div class="chapter-track" id="chapter-track" role="img" aria-label="Прогресс испытаний"><span></span><span></span><span></span><span></span></div>
+        <button class="reset-btn" id="reset-btn" type="button">Пройти заново</button>
+      </div>
+    </header>
+
+    <section class="zone zone-map" id="zone-map" aria-labelledby="map-title">
+      <div class="stars-layer" aria-hidden="true"></div>
+      <div class="moon" aria-hidden="true"></div>
+      <div class="map-terrain" aria-hidden="true"><span class="hill h1"></span><span class="hill h2"></span><i class="mt-tree a"></i><i class="mt-tree b"></i><i class="mt-tree c"></i><i class="mt-tree d"></i><span class="mist"></span><span class="ground"></span></div>
+      <div class="map-head">
+        <div class="quest-sign">
+          <span class="sign-label">Урок 1 · десять ключей</span>
+          <h1 id="map-title">Испытание<br>ключей</h1>
+          <div class="sign-runes" aria-hidden="true"><span>✧</span><span>⌑</span><span>✧</span></div>
+        </div>
+        <p class="map-sub">Десять ключей урока прошли проверку в Мастерской — настала пора испытаний. Пройди все четыре локации, и каждая снятая печать откроет одну цифру тайного кода.</p>
+        <div class="code-track" id="code-track" aria-label="Печати кода"></div>
+      </div>
+      <div class="portals" id="portals"></div>
+      <div class="map-finale" id="map-finale"></div>
+    </section>
+
+    <section class="zone zone-t1" id="zone-t1" hidden>
+      <div class="room-decor" aria-hidden="true"><span class="wall-col left"></span><span class="wall-col right"></span></div>
+      <div class="panorama">
+        <div class="pano-view pano-tavern" aria-hidden="true">
+          <i class="pv-sun"></i><i class="pv-cloud"></i><i class="pv-birds"></i>
+          <div class="pv-mountains"></div><div class="pv-hills"></div>
+          <div class="pv-village"><i class="pv-house"><b></b></i><i class="pv-house"><b></b></i><i class="pv-house"><b></b></i></div>
+          <i class="pv-path"></i>
+        </div>
+        <button class="room-prop lantern a" type="button" aria-label="Качнуть фонарь"><span class="lantern-body"></span></button>
+        <button class="room-prop lantern b" type="button" aria-label="Качнуть фонарь"><span class="lantern-body"></span></button>
+        <div class="pano-props">
+          <button class="room-prop bottle-row" type="button" aria-label="Пошевелить бутылки с зельями"><i class="bottle"></i><i class="bottle violet"></i><i class="bottle amber"></i></button>
+          <div class="book-row" aria-hidden="true"><i></i><i></i><i></i></div>
+        </div>
+        <div class="pano-sign"><span>Трактир «Наливай и плач»</span></div>
+        <div class="pano-sill" aria-hidden="true"></div>
+      </div>
+      <div class="zone-head"></div>
+      <div class="quiz-mount"></div>
+    </section>
+
+    <section class="zone zone-t2" id="zone-t2" hidden>
+      <div class="room-decor" aria-hidden="true"><span class="plank-wall left"></span><span class="plank-wall right"></span></div>
+      <div class="panorama">
+        <div class="pano-view pano-swamp" aria-hidden="true">
+          <span class="sw-moon"></span><div class="pv-forest"></div><div class="pv-water"></div><i class="pv-reflection"></i>
+          <i class="pv-mist a"></i><i class="pv-mist b"></i><i class="pv-reeds"></i><i class="pv-logs"></i>
+          <span class="firefly f1"></span><span class="firefly f2"></span><span class="firefly f3"></span><span class="firefly f4"></span>
+        </div>
+        <div class="pano-props">
+          <button class="room-prop jar-shelf" type="button" aria-label="Пошевелить банки с травами"><i class="jar"></i><i class="jar mid"></i><i class="jar tall"></i></button>
+          <div class="root-board" aria-hidden="true"><i></i><i></i><i></i></div>
+          <button class="room-prop cauldron" type="button" aria-label="Помешать варево в котле"><span class="cauldron-body"></span><span class="brew"></span><i class="bub n1"></i><i class="bub n2"></i><i class="bub n3"></i></button>
+        </div>
+        <div class="pano-sign"><span>Хижина Жаберта</span></div>
+        <div class="pano-sill" aria-hidden="true"></div>
+      </div>
+      <div class="zone-head"></div>
+      <div class="quiz-mount"></div>
+    </section>
+
+    <section class="zone zone-t3" id="zone-t3" hidden>
+      <div class="room-decor" aria-hidden="true"><span class="panel-wall left"><i class="led l1"></i><i class="led l2"></i></span><span class="panel-wall right"><i class="led l3"></i><i class="led l4"></i></span></div>
+      <div class="panorama">
+        <div class="pano-view pano-city" aria-hidden="true">
+          <i class="pv-moon-s"></i><div class="pv-skyline"></div>
+          <div class="pv-towers"><i class="pv-building"><b class="pv-wins"></b></i><i class="pv-building"><b class="pv-wins"></b></i><i class="pv-building"><b class="pv-wins"></b></i><i class="pv-building"><b class="pv-wins"></b></i><i class="pv-building"><b class="pv-wins"></b></i></div>
+        </div>
+        <div class="pano-props">
+          <button class="room-prop gear" type="button" aria-label="Крутануть шестерёнку"></button>
+          <button class="room-prop power-bank" type="button" aria-label="Включить блок питания"><i></i><i></i><i></i></button>
+          <span class="gauge" aria-hidden="true"></span>
+          <span class="blueprint" aria-hidden="true"></span>
+        </div>
+        <div class="pano-sign"><span>Лаборатория РОБ-ОТ-3000</span></div>
+        <div class="pano-sill" aria-hidden="true"></div>
+      </div>
+      <div class="zone-head"></div>
+      <div class="quiz-mount"></div>
+    </section>
+
+    <section class="zone zone-t4" id="zone-t4" hidden>
+      <div class="room-decor" aria-hidden="true"><span class="tower-frieze"></span><span class="masonry left"></span><span class="masonry right"></span></div>
+      <div class="panorama">
+        <div class="pano-view pano-space" aria-hidden="true">
+          <div class="pv-stars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <i class="pv-bigmoon"></i><span class="constellation"><i></i><i></i><i></i><i></i><i></i></span><div class="pv-night-peaks"></div>
+        </div>
+        <span class="pano-runes" aria-hidden="true">⌑ · ⋄ · ⌑</span>
+        <button class="room-prop bell" type="button" aria-label="Позвонить в колокол"><span class="bell-rope"></span><span class="bell-body"></span></button>
+        <span class="star-chart" aria-hidden="true"><i></i></span>
+        <div class="pano-props">
+          <div class="book-stack" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="star-globe" aria-hidden="true"><i></i></div>
+          <button class="room-prop crystal" type="button" aria-label="Зажечь кристалл"><span class="crystal-body"></span><span class="pedestal"></span></button>
+        </div>
+        <div class="pano-sign"><span>✧ Звуковая башня ⌑</span></div>
+        <div class="pano-sill" aria-hidden="true"></div>
+      </div>
+      <div class="zone-head"></div>
+      <div class="quiz-mount"></div>
+    </section>
+
+    <footer class="quest-footer">
+      <span class="footer-location">Путь иероглифа · Испытание ключей</span>
+      <span>水 艹 木 口 手 心 金 人 虫 言</span>
+    </footer>
+  </main>
+  <nav class="char-menu" aria-label="Локации задания"><div class="menu-inner" id="menu-inner"></div></nav>
+  <p id="voice-tip" role="status" hidden>Не удалось озвучить слог — проверь, что папка audio на месте, и попробуй снова.</p>
+  <noscript><p style="color:#ffe5bd;background:#593d39;border:2px solid #c99a72;padding:12px;border-radius:0;margin:16px;">Включи JavaScript — без него карта локаций и испытания не работают.</p></noscript>
+</body>
+</html>
